@@ -1,60 +1,75 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div>
+    <div class="menu">
+      <ul class="menu-botoes">
+        <li v-for="icone of icones" class="menu-botoes-item">
+          <input type="image" :alt="icone.titulo" :src="icone.url" class="botao"/>
+        </li>
+      </ul>
+    </div>
+    <tabbed-editor ref="tabbedEditor" />
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+
+  import TabbedEditor from './components/shared/custom-codemirror/tabbed-editor.vue'
+
+  export default {
+
+    name: 'App',
+    components: {
+      TabbedEditor
+    },
+
+    data() {
+      return {
+        icones: [
+          {
+            url: "src/assets/icons/botao-play.svg",
+            titulo: "play"
+          },
+          {
+            url: "src/assets/icons/botao-pause.svg",
+            titulo: "pause"
+          },
+          {
+            url: "src/assets/icons/botao-next.svg",
+            titulo: "next"
+          },
+          {
+            url: "src/assets/icons/botao-stop.svg",
+            titulo: "stop"
+          }
+        ],
+      }
     }
   }
-}
+
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .menu {
+    width: 96%;
+    margin: 0 auto;
+    padding: 0 auto;
+  }
 
-h1, h2 {
-  font-weight: normal;
-}
+  .menu-botoes {
+    list-style: none;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  .menu-botoes .menu-botoes-item {
+    display: inline-block;
+    margin-left: 5%;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+  .menu-botoes .menu-botoes-item .botao {
+    width: 100%;
+    max-height: 50px;
+    max-width: 50px;
+    border: 2px solid black;
+    padding: 5px;
+    background-color: #F5E68F;
+  }
 </style>

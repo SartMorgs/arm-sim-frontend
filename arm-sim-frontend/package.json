@@ -10,7 +10,14 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "vue": "^2.5.11"
+    "codemirror": {
+      "integrity": "sha512-D3wYH90tYY1BsKlUe0oNj2JAhQ9TepkD51auk3N7q+4uz7A/cgJ5JsWHreT0PqieW1QhOuqxQ2reCXV1YXzecg==",
+      "resolved": "https://registry.npmjs.org/codemirror/-/codemirror-5.61.0.tgz",
+      "version": "5.61.0"
+    },
+    "uiv": "^1.3.0",
+    "vue": "^2.5.11",
+    "vue-codemirror": "^4.0.6"
   },
   "browserslist": [
     "> 1%",
