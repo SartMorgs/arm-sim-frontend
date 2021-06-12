@@ -42,13 +42,10 @@
 import Vue from 'vue'
 
 import VueCodeMirror from 'codemirror'
-import 'codemirror/mode/sql/sql.js'
 import 'codemirror/theme/solarized.css'
 import 'codemirror/addon/display/fullscreen.js'
 import 'codemirror/addon/display/autorefresh.js'
-import 'codemirror/mode/javascript/javascript.js'
-import 'codemirror/mode/xml/xml.js'
-import 'codemirror/mode/htmlmixed/htmlmixed.js'
+import 'codemirror/mode/armasm/armasm.js'
 import 'codemirror/addon/dialog/dialog.js'
 import 'codemirror/addon/search/searchcursor.js'
 import 'codemirror/addon/search/search.js'
@@ -57,10 +54,6 @@ import 'codemirror/addon/search/matchesonscrollbar.js'
 import 'codemirror/addon/search/jump-to-line.js'
 import 'codemirror/addon/hint/show-hint.js'
 import 'codemirror/addon/hint/css-hint.js'
-import 'codemirror/addon/hint/html-hint.js'
-import 'codemirror/addon/hint/javascript-hint.js'
-import 'codemirror/addon/hint/sql-hint.js'
-import 'codemirror/addon/hint/xml-hint.js'
 
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/addon/dialog/dialog.css'
@@ -109,7 +102,7 @@ export default {
             styleActiveLine: true,
             lineNumbers: true,
             line: true,
-            mode: 'text/x-mysql',
+            mode: 'text/x-armasm',
             theme: 'solarized light',
             height: '400px',
             extraKeys: {
