@@ -26,19 +26,31 @@
       return {
         icones: [
           {
-            url: "src/assets/icons/botao-play.svg",
+            url: "src/assets/icons/save-button.svg",
+            titulo: "save"
+          },
+          {
+            url: "src/assets/icons/open-button.svg",
+            titulo: "open"
+          },
+          {
+            url: "src/assets/icons/compile-button.svg",
+            titulo: "compile"
+          },
+          {
+            url: "src/assets/icons/play-button.svg",
             titulo: "play"
           },
           {
-            url: "src/assets/icons/botao-pause.svg",
+            url: "src/assets/icons/pause-button.svg",
             titulo: "pause"
           },
           {
-            url: "src/assets/icons/botao-next.svg",
+            url: "src/assets/icons/next-button.svg",
             titulo: "next"
           },
           {
-            url: "src/assets/icons/botao-stop.svg",
+            url: "src/assets/icons/stop-button.svg",
             titulo: "stop"
           }
         ],
