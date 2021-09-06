@@ -83,6 +83,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div id="pagTable" class="col-sm-12">
         <div class="arm-on-off-table">
           <button
             class="arm-table-btn"
@@ -94,57 +96,107 @@
             Banco de Registradores
           </button>
           <table class="arm-table" v-if="!hideRegister">
-            <tr class="table-column">
-              <th class="table-item">AAXAA</th>
-              <th class="table-item">BBXBB</th>
-              <th class="table-item">CCXCC</th>
-              <th class="table-item">DDXDD</th>
-            </tr>
-            <tr class="table-column">
-              <th class="table-item">NAME</th>
-              <th class="table-item">ADDRESS</th>
-              <th class="table-item">BINARY INSTRUCTION</th>
-              <th class="table-item">ASSEMBLY INSTRUCTION</th>
-            </tr>
-            <tr class="table-column">
-              <th class="table-item">NAME</th>
-              <th class="table-item">ADDRESS</th>
-              <th class="table-item">BINARY INSTRUCTION</th>
-              <th class="table-item">ASSEMBLY INSTRUCTION</th>
-            </tr>
+            <tbody>
+              <tr class="table-column" v-for="p in displayedPosts">
+                <th class="table-item">{{ p.um }}</th>
+                <th class="table-item">{{ p.dois }}</th>
+                <th class="table-item">{{ p.tres }}</th>
+                <th class="table-item">{{ p.quatro }}</th>
+                <th class="table-item">{{ p.cinco }}</th>
+                <th class="table-item">{{ p.seis }}</th>
+                <th class="table-item">{{ p.sete }}</th>
+                <th class="table-item">{{ p.oito }}</th>
+                <th class="table-item">{{ p.nove }}</th>
+                <th class="table-item">{{ p.dez }}</th>
+                <th class="table-item">{{ p.onze }}</th>
+                <th class="table-item">{{ p.doze }}</th>
+                <th class="table-item">{{ p.treze }}</th>
+                <th class="table-item">{{ p.catorze }}</th>
+                <th class="table-item">{{ p.quinze }}</th>
+                <th class="table-item">{{ p.deze }}</th>
+              </tr>
+            </tbody>
           </table>
-        </div>
+          <div class="pagination" v-if="!hideRegister">
+            <button type="button" class="page-link">Previous</button>
 
+            <button type="button" class="page-link">1</button>
+            <button type="button" class="page-link">2</button>
+            <button type="button" class="page-link">3</button>
+            <button type="button" class="page-link">4</button>
+            <button type="button" class="page-link">5</button>
+            <button type="button" class="page-link">6</button>
+            <button type="button" class="page-link">7</button>
+            <button type="button" class="page-link">8</button>
+            <button type="button" class="page-link">9</button>
+            <button type="button" class="page-link">10</button>
+            <button type="button" class="page-link">11</button>
+            <button type="button" class="page-link">12</button>
+            <button type="button" class="page-link">13</button>
+            <button type="button" class="page-link">14</button>
+            <button type="button" class="page-link">15</button>
+            <button type="button" class="page-link">16</button>
+
+            <button type="button" class="page-link">Next</button>
+          </div>
+        </div>
+      </div>
+      <div id="pagTable" class="col-sm-12">
         <div class="arm-on-off-table">
           <button
             class="arm-table-btn"
             v-on:click="(hideRam = !hideRam), (ajustRam = !ajustRam)"
             v-bind:style="ajustRam ? 'width: 100%' : 'width: 20%'"
           >
-            Memória RAM
+            Memória de RAM
           </button>
           <table class="arm-table" v-if="!hideRam">
-            <tr class="table-column">
-              <th class="table-item">AAXAA</th>
-              <th class="table-item">BBXBB</th>
-              <th class="table-item">CCXCC</th>
-              <th class="table-item">DDXDD</th>
-            </tr>
-            <tr class="table-column">
-              <th class="table-item">NAME</th>
-              <th class="table-item">ADDRESS</th>
-              <th class="table-item">BINARY INSTRUCTION</th>
-              <th class="table-item">ASSEMBLY INSTRUCTION</th>
-            </tr>
-            <tr class="table-column">
-              <th class="table-item">NAME</th>
-              <th class="table-item">ADDRESS</th>
-              <th class="table-item">BINARY INSTRUCTION</th>
-              <th class="table-item">ASSEMBLY INSTRUCTION</th>
-            </tr>
+            <tbody>
+              <tr class="table-column" v-for="p in displayedPosts">
+                <th class="table-item">{{ p.um }}</th>
+                <th class="table-item">{{ p.dois }}</th>
+                <th class="table-item">{{ p.tres }}</th>
+                <th class="table-item">{{ p.quatro }}</th>
+                <th class="table-item">{{ p.cinco }}</th>
+                <th class="table-item">{{ p.seis }}</th>
+                <th class="table-item">{{ p.sete }}</th>
+                <th class="table-item">{{ p.oito }}</th>
+                <th class="table-item">{{ p.nove }}</th>
+                <th class="table-item">{{ p.dez }}</th>
+                <th class="table-item">{{ p.onze }}</th>
+                <th class="table-item">{{ p.doze }}</th>
+                <th class="table-item">{{ p.treze }}</th>
+                <th class="table-item">{{ p.catorze }}</th>
+                <th class="table-item">{{ p.quinze }}</th>
+                <th class="table-item">{{ p.deze }}</th>
+              </tr>
+            </tbody>
           </table>
-        </div>
+          <div class="pagination" v-if="!hideRam">
+            <button type="button" class="page-link">Previous</button>
 
+            <button type="button" class="page-link">1</button>
+            <button type="button" class="page-link">2</button>
+            <button type="button" class="page-link">3</button>
+            <button type="button" class="page-link">4</button>
+            <button type="button" class="page-link">5</button>
+            <button type="button" class="page-link">6</button>
+            <button type="button" class="page-link">7</button>
+            <button type="button" class="page-link">8</button>
+            <button type="button" class="page-link">9</button>
+            <button type="button" class="page-link">10</button>
+            <button type="button" class="page-link">11</button>
+            <button type="button" class="page-link">12</button>
+            <button type="button" class="page-link">13</button>
+            <button type="button" class="page-link">14</button>
+            <button type="button" class="page-link">15</button>
+            <button type="button" class="page-link">16</button>
+
+            <button type="button" class="page-link">Next</button>
+          </div>
+        </div>
+      </div>
+      <div id="pagTable" class="col-sm-12">
         <div class="arm-on-off-table">
           <button
             class="arm-table-btn"
@@ -154,49 +206,49 @@
             Memória de Dispositivos
           </button>
           <table class="arm-table" v-if="!hideDisp">
-            <tr class="table-column">
-              <th class="table-item">AAXAA</th>
-              <th class="table-item">BBXBB</th>
-              <th class="table-item">CCXCC</th>
-              <th class="table-item">DDXDD</th>
-            </tr>
-            <tr class="table-column">
-              <th class="table-item">NAME</th>
-              <th class="table-item">ADDRESS</th>
-              <th class="table-item">BINARY INSTRUCTION</th>
-              <th class="table-item">ASSEMBLY INSTRUCTION</th>
-            </tr>
-            <tr class="table-column">
-              <th class="table-item">NAME</th>
-              <th class="table-item">ADDRESS</th>
-              <th class="table-item">BINARY INSTRUCTION</th>
-              <th class="table-item">ASSEMBLY INSTRUCTION</th>
-            </tr>
-            <tr class="table-column">
-              <th class="table-item">NAME</th>
-              <th class="table-item">ADDRESS</th>
-              <th class="table-item">BINARY INSTRUCTION</th>
-              <th class="table-item">ASSEMBLY INSTRUCTION</th>
-            </tr>
-            <tr class="table-column">
-              <th class="table-item">NAME</th>
-              <th class="table-item">ADDRESS</th>
-              <th class="table-item">BINARY INSTRUCTION</th>
-              <th class="table-item">ASSEMBLY INSTRUCTION</th>
-            </tr>
-            <tr class="table-column">
-              <th class="table-item">NAME</th>
-              <th class="table-item">ADDRESS</th>
-              <th class="table-item">BINARY INSTRUCTION</th>
-              <th class="table-item">ASSEMBLY INSTRUCTION</th>
-            </tr>
-            <tr class="table-column">
-              <th class="table-item">NAME</th>
-              <th class="table-item">ADDRESS</th>
-              <th class="table-item">BINARY INSTRUCTION</th>
-              <th class="table-item">ASSEMBLY INSTRUCTION</th>
-            </tr>
+            <tbody>
+              <tr class="table-column" v-for="p in displayedPosts">
+                <th class="table-item">{{ p.um }}</th>
+                <th class="table-item">{{ p.dois }}</th>
+                <th class="table-item">{{ p.tres }}</th>
+                <th class="table-item">{{ p.quatro }}</th>
+                <th class="table-item">{{ p.cinco }}</th>
+                <th class="table-item">{{ p.seis }}</th>
+                <th class="table-item">{{ p.sete }}</th>
+                <th class="table-item">{{ p.oito }}</th>
+                <th class="table-item">{{ p.nove }}</th>
+                <th class="table-item">{{ p.dez }}</th>
+                <th class="table-item">{{ p.onze }}</th>
+                <th class="table-item">{{ p.doze }}</th>
+                <th class="table-item">{{ p.treze }}</th>
+                <th class="table-item">{{ p.catorze }}</th>
+                <th class="table-item">{{ p.quinze }}</th>
+                <th class="table-item">{{ p.deze }}</th>
+              </tr>
+            </tbody>
           </table>
+          <div class="pagination" v-if="!hideDisp">
+            <button type="button" class="page-link">Previous</button>
+
+            <button type="button" class="page-link">1</button>
+            <button type="button" class="page-link">2</button>
+            <button type="button" class="page-link">3</button>
+            <button type="button" class="page-link">4</button>
+            <button type="button" class="page-link">5</button>
+            <button type="button" class="page-link">6</button>
+            <button type="button" class="page-link">7</button>
+            <button type="button" class="page-link">8</button>
+            <button type="button" class="page-link">9</button>
+            <button type="button" class="page-link">10</button>
+            <button type="button" class="page-link">11</button>
+            <button type="button" class="page-link">12</button>
+            <button type="button" class="page-link">13</button>
+            <button type="button" class="page-link">14</button>
+            <button type="button" class="page-link">15</button>
+            <button type="button" class="page-link">16</button>
+
+            <button type="button" class="page-link">Next</button>
+          </div>
         </div>
       </div>
     </div>
@@ -209,6 +261,7 @@ import ButtonsMenu from "./components/shared/buttons-menu/buttons-menu.vue";
 import RomTable from "./components/shared/rom-table/rom-table.vue";
 
 export default {
+  el: "#pagTable",
   name: "App",
   components: {
     editor: TabbedEditor,
@@ -237,6 +290,10 @@ export default {
         { id: 8, first_name: "Rockhead", last_name: "Slate" },
         { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
       ],
+      posts: [""],
+      page: 1,
+      perPage: 17,
+      pages: [],
     };
   },
   computed: {
@@ -245,7 +302,53 @@ export default {
     },
   },
 
-  methods: {},
+  methods: {
+    getPosts() {
+      let data = [];
+      for (let i = 0; i < 256; i++) {
+        let zero = 0;
+        this.posts.push({
+          um: zero.toString(16),
+          dois: zero.toString(16),
+          tres: zero.toString(16),
+          quatro: zero.toString(16),
+          cinco: zero.toString(16),
+          seis: zero.toString(16),
+          sete: zero.toString(16),
+          oito: zero.toString(16),
+          nove: zero.toString(16),
+          dez: zero.toString(16),
+          onze: zero.toString(16),
+          doze: zero.toString(16),
+          treze: zero.toString(16),
+          catorze: zero.toString(16),
+          quinze: zero.toString(16),
+          deze: zero.toString(16),
+        });
+      }
+    },
+    setPages() {
+      let numberOfPages = Math.ceil(this.posts.length / this.perPage);
+      for (let index = 1; index <= numberOfPages; index++) {
+        this.pages.push(index);
+      }
+    },
+    paginate(posts) {
+      let page = this.page;
+      let perPage = this.perPage;
+      let from = page * perPage - perPage;
+      let to = page * perPage;
+      return posts.slice(from, to);
+    },
+  },
+  computed: {
+    displayedPosts() {
+      return this.paginate(this.posts);
+    },
+  },
+  created() {
+    this.getPosts();
+  },
 };
 </script>
 <style >
@@ -342,5 +445,18 @@ export default {
   border-right: none;
   width: 98.7%;
   text-align: center;
+}
+button.page-link {
+  display: inline-block;
+}
+button.page-link {
+  font-size: 20px;
+  background-color: #f5e68f;
+  color: #aa9106;
+  font-weight: 500;
+}
+.pagination {
+  margin-left: 30%;
+  margin-top: 1%;
 }
 </style>
